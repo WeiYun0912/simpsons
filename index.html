@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE SIMPSONS</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+
+    <section>
+      <header>
+        <div class="title">
+          <div class="icon"></div>
+          <p>THE SIMPSONS.</p>
+        </div>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Item</a></li>
+          <li><a href="#">Gallary</a></li>
+        </ul>
+      </header>
+      <video autoplay muted loop id="myVideo">
+        <source src="assets/video/simpsons.mp4#t=22" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+      <div class="wrapper"></div>
+      <div class="content">
+        <div class="textBox">
+          <h2 class="titleText">The Simpsons</h2>
+          <p class="introduceText">
+            The Simpsons is an American animated sitcom created by Matt Groening
+            for the Fox Broadcasting Company.The series is a satirical depiction
+            of working-class life epitomized by the Simpson family, which
+            consists of Homer, Marge, Bart, Lisa, and Maggie. The show is set in
+            the fictional town of Springfield and parodies American culture,
+            society, television, and the human condition.
+          </p>
+          <a href="#" class="readMore">Read More</a>
+        </div>
+        <div class="imgBox">
+          <img src="assets/img/simpsons.png" class="simpsons" />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <img
+            src="assets/img/thumb1.png"
+            onclick="imgSlider('assets/img/char1.png',0);"
+            style="transform: scale(1.2)"
+          />
+        </li>
+        <li>
+          <img
+            src="assets/img/thumb2.png"
+            onclick="imgSlider('assets/img/char2.png',1);"
+            height="110"
+            style="transform: scale(1.2)"
+          />
+        </li>
+        <li>
+          <img
+            src="assets/img/thumb3.png"
+            onclick="imgSlider('assets/img/char3.png',2);"
+          />
+        </li>
+        <li>
+          <img
+            src="assets/img/thumb4.png"
+            onclick="imgSlider('assets/img/char4.png',3);"
+          />
+        </li>
+        <li>
+          <img
+            src="assets/img/thumb5.png"
+            onclick="imgSlider('assets/img/char5.png',4);"
+            style="transform: scale(1.3)"
+          />
+        </li>
+      </ul>
+      <ul class="sci">
+        <li>
+          <a href="#"><img src="assets/img/facebook.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="assets/img/twitter.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="assets/img/instagram.png" /></a>
+        </li>
+      </ul>
+    </section>
+    <div class="gallary" style="background-color: #f8c835">
+      <div class="banner" data-tilt>
+        <img src="assets/img/banner.jpg" alt="" />
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente officia beatae, dolorem est maiores consequatur dolorum eius nulla sed quas eligendi quam numquam suscipit deserunt fuga error. Distinctio, sed totam.</h2>
+      </div>
+      <div class="banner" data-tilt data-tilt-scale="1.1">
+        <img src="assets/img/banner2.jpg" alt="" />
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente officia beatae, dolorem est maiores consequatur dolorum eius nulla sed quas eligendi quam numquam suscipit deserunt fuga error. Distinctio, sed totam.</h2>
+      </div>
+      <div class="banner">
+        <img src="assets/img/banner3.jpg" alt="" />
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente officia beatae, dolorem est maiores consequatur dolorum eius nulla sed quas eligendi quam numquam suscipit deserunt fuga error. Distinctio, sed totam.</h2>
+      </div>
+      <div class="banner">
+        <img src="assets/img/banner4.jpg" alt="" />
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente officia beatae, dolorem est maiores consequatur dolorum eius nulla sed quas eligendi quam numquam suscipit deserunt fuga error. Distinctio, sed totam.</h2>
+      </div>
+    </div>
+    </section>
+    <script src="assets/js/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.1/ScrollTrigger.min.js"></script>
+    <script>
+      const charactersName = [
+        "Homer Simpson",
+        "Marge Simpson",
+        "Bart Simpson",
+        "Lisa Simpson",
+        "Maggie Simpson",
+      ];
+
+      const charactersIntro = [
+        `Homer Simpson was born and died on 12th May 1956 and is the son of
+              Abe and Mona, he then met Marge around the 1960's and they married
+              in 1979 and then had four children together, when his wife Marge was
+              pregnant (and Homer had hair) with Bart, they lived in a house
+              together, when Marge was pregnant with Lisa, they moved into the
+              Evergreen Terrace next door to Homer's perfect neighbour Ned.`,
+        `Marjorie Jacqueline "Marge" Bouvier-Simpson is the very attractive and unbearably beautiful tetartagonist of 1989 sitcom series The Simpsons. She has been voiced by Julie Kavner. Marge is Homer's all-time wife.`,
+        `Bartholomew JoJo “Bart” Simpson is a character (the deuteragonist) in the American animated television series The Simpsons and part of the Simpson family. He is voiced by Nancy Cartwright and first appeared on television in The Tracey Ullman Show short "Good Night" on April 19, 1987.`,
+        `Lisa Simpson is a fictional character (the tritagonist) in the animated television series The Simpsons. She is the middle child and most intelligent of the Simpson family.`,
+        `Maggie Simpson is the baby of The Simpsons family from the show of the same name.`,
+      ];
+      function imgSlider(src, index) {
+        document.querySelector(".content").innerHTML = `
+            <div class="textBox">
+                <h2 class="titleText">${charactersName[index]}</h2>
+                <p class="introduceText">
+                    ${charactersIntro[index]}
+                </p>
+                <a href="#" class="readMore">Read More</a>
+            </div>
+            <div class="imgBox">
+                <img src="${src}" class="simpsons" />
+
+            </div>
+            `;
+      }
+
+
+      const banner = gsap.utils.toArray(".banner");
+
+      banner.forEach((t, i) => {
+          if(i%2==0){
+            ScrollTrigger.create({
+                trigger: t,
+                toggleClass: "bannerActiveLeftToRight",
+                start: "top 70%",
+
+            });
+          }else{
+            ScrollTrigger.create({
+                trigger: t,
+                toggleClass: "bannerActiveRightToLeft",
+                start: "top 70%",
+            });
+          }
+
+      });
+
+    </script>
+  </body>
+</html>
